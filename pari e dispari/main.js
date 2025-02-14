@@ -15,25 +15,27 @@ console.log(Pc_number + " " + "Pc Number")
 let sum = Pc_number + userNumber;
 console.log(sum)
 
-let even = false
 
 //check numb if odd or even 
-
-if (sum % 2 === 0) {
-
-    console.log("even")
-} else {
-
-    console.log("odd")
-}
+const result = oddoreven(sum)
 
 // declaring winner
 
-if (userchoice == even) {
-    even = true
+if (userchoice == result) {
     console.log("uwin")
-} else if (userchoice == odd) {
-    console.log("oddwin")
 } else {
-    console.log("pc_wins")
+    console.log("pc wins")
 }
+
+function oddoreven(sum) {
+    let sum_type = ``
+
+    if (sum % 2 === 0) {
+        sum_type = `even`
+    } else {
+        sum_type = `odd`
+    }
+    console.log(sum_type)
+    return sum_type
+}
+
