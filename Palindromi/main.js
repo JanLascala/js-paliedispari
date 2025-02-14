@@ -3,16 +3,18 @@ const userName = prompt("write your name")
 console.log(userName)
 
 //reverse name
-const reverse = userName.split('').reverse().join('');
-console.log(reverse)
+
 
 //check if same
-const sumnames = userName + reverse
-console.log(sumnames)
 
 
-function checkifpalindrome(sumnames) {
+
+function checkifpalindrome(userName) {
+
+    const reverse = userName.split('').reverse().join('');
+    console.log(reverse)
     let result = ``
+
     if (userName == reverse) {
         result = `palindrome`
         console.log("palindorme!")
@@ -23,7 +25,7 @@ function checkifpalindrome(sumnames) {
     return result
 }
 
-const palindorme = checkifpalindrome(sumnames)
+const palindorme = checkifpalindrome(userName)
 
 
 //result
